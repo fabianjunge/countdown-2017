@@ -1,12 +1,17 @@
 function startTimer() {
+    var currentYear = (new Date).getTime();
+
+    var newYear = (new Date()).setTime(1483225200000); // 2017
+    //var newYear = (new Date()).setTime(1451602800000); // 2016
+
     var today = new Date();
 
     var hoursLeft = 23 - today.getHours();
     var minutesLeft = 59 - today.getMinutes();
     var secondsLeft = 59 - today.getSeconds();
 
-    if (Math.floor(secondsLeft) <= 0 && Math.floor(minutesLeft) <= 0 && Math.floor(hoursLeft) <= 0) {
-        document.getElementById('countdown-chars').innerHTML = "00:00:00";
+    if (currentYear >= newYear) {
+        document.getElementById('countdown-chars').innerHTML = "HAPPY NEW YEAR!";
     }
     else {
         document.getElementById('countdown-chars').innerHTML =
