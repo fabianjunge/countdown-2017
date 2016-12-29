@@ -20,7 +20,7 @@ function startTimer() {
         wrapChars(secondsLeft, -2);
     }
 
-    setTimeout('startTimer()', 999);
+    setInterval("startTimer()", 999);
 }
 
 function wrapChars(string, maxDigits) {
