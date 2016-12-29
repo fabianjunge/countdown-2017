@@ -1,0 +1,78 @@
+body {
+  margin: 0px;
+  background-color: black;
+}
+
+#videoplayer {
+  opacity: 0.8;
+
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+#header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+
+  top: 0px;
+
+  font-family: 'Permanent Marker', cursive;
+}
+
+#countdown {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+
+  bottom: 0px;
+
+  font-family: 'Kumar One', cursive;
+}
+
+h2 {
+  font-size: 100px;
+  text-align: center;
+
+  color: #E91E63;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+h3 {
+  font-size: 150px;
+  text-align: center;
+
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 0.4s ease-in;
+}
+
+@keyframes blink {
+     0%{}
+     80% { color: #E91E63; }
+     84% { color: #26c6da; }
+     88% { color: #E91E63; }
+     92% { color: #26c6da; }
+     96% { color: #E91E63; }
+}
