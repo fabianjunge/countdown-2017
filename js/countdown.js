@@ -19,8 +19,6 @@ function startTimer() {
         wrapChars(minutesLeft, -2) + ":" +
         wrapChars(secondsLeft, -2);
     }
-
-    setInterval("startTimer()", 999);
 }
 
 function wrapChars(string, maxDigits) {
@@ -28,4 +26,4 @@ function wrapChars(string, maxDigits) {
     return string;
 }
 
-startTimer();
+setInterval("startTimer()", 999);
