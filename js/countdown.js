@@ -8,7 +8,7 @@ function startTimer() {
 
     var oneDay = 1000 * 60 * 60 * 24;
     var difference = Math.abs(today - newYear);
-    daysLeft = Math.round(difference / oneDay) - 1;
+    daysLeft = Math.round(difference / oneDay);
 
     var hoursLeft = 23 - today.getHours() + (daysLeft * 24);
     var minutesLeft = 59 - today.getMinutes();
