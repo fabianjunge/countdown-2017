@@ -6,18 +6,36 @@ function startTimer() {
 
     var today = new Date();
 
-    var hoursLeft = 23 - today.getHours();
+    var oneDay = 1000 * 60 * 60 * 24;
+    var difference = Math.abs(today - newYear);
+    daysLeft = Math.round(difference / oneDay) - 1;
+
+    var hoursLeft = 23 - today.getHours() + (daysLeft * 24);
     var minutesLeft = 59 - today.getMinutes();
     var secondsLeft = 59 - today.getSeconds();
 
     if (currentYear >= newYear) {
         document.getElementById('countdown-chars').innerHTML = "HAPPY NEW YEAR!";
-    }
-    else {
+    } else {
+        var hours = 0;
+        if (hours > 99) {
+            if (hours > 999) {
+                hours = wrapChars(hoursLeft, -4);
+            } else {
+                hours = wrapChars(hoursLeft, -3);
+            }
+        } else {
+            hours = wrapChars(hoursLeft, -2);
+        }
+
+        var minutes = wrapChars(minutesLeft, -2);
+
+        var seconds = wrapChars(secondsLeft, -2);
+
         document.getElementById('countdown-chars').innerHTML =
-        wrapChars(hoursLeft, -2) + ":" +
-        wrapChars(minutesLeft, -2) + ":" +
-        wrapChars(secondsLeft, -2);
+        hours + ":" +
+        minutes + ":" +
+        seconds;
     }
 }
 
