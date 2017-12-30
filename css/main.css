@@ -31,7 +31,19 @@ body {
 
   bottom: 0px;
 
-  font-family: 'Kumar One', cursive;
+}
+
+#countdown-chars {
+  font-family: 'Roboto Mono', cursive;
+  font-weight: 400;
+  color: white;
+  font-size: 150px;
+  
+  text-align: center;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  letter-spacing: -15px;
 }
 
 h2 {
@@ -39,19 +51,6 @@ h2 {
   text-align: center;
 
   color: #E91E63;
-  letter-spacing: 2px;
-  text-align: center;
-  margin: 0;
-  font-weight: 400;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-h3 {
-  font-size: 150px;
-  text-align: center;
-
-  color: white;
   letter-spacing: 2px;
   text-align: center;
   margin: 0;

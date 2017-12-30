@@ -3,12 +3,12 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('ytplayer', {
     height: document.documentElement.clientHeight,
     width: document.documentElement.clientWidth,
-    videoId: '8t3XYNxnUBs',
+    videoId: '7-4GpL41DIE',
     playerVars: {
-      loop: '1',
       disablekb: '0',
       controls: '0',
-      showinfo: '0'
+      showinfo: '0',
+      autoplay: '1'
     },
     events: {
       'onReady': onPlayerReady,
@@ -18,13 +18,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  event.target.playVideo();
   event.target.mute();
 }
 
 function onPlayerStateChange(event) {
-}
-
-function stopVideo() {
-  player.stopVideo();
+  if (player.getPlayerState() == 0) { 
+    // 0 == ended -> restart video
+    event.target.playVideo();
+  }
 }

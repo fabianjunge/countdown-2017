@@ -1,7 +1,8 @@
 function startTimer() {
     var currentYear = (new Date).getTime();
 
-    var newYear = (new Date()).setTime(1483225200000); // 2017
+    var newYear = new Date("2018-01-01T00:00:00.000Z"); // 2018
+    //var newYear = (new Date()).setTime(1483225200000); // 2017
     //var newYear = (new Date()).setTime(1451602800000); // 2016
 
     var today = new Date();
@@ -9,8 +10,6 @@ function startTimer() {
     var oneDay = 1000 * 60 * 60 * 24;
     var difference = Math.abs(today - newYear);
     daysLeft = Math.floor(difference / oneDay);
-
-
     var hoursLeft = 23 - today.getHours() + (daysLeft * 24);
     var minutesLeft = 59 - today.getMinutes();
     var secondsLeft = 59 - today.getSeconds();
